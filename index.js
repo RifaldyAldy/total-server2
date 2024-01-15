@@ -20,12 +20,16 @@ db.mongoose
   .then(() => console.log("Berhasil konek!"))
   .catch((err) => {
     console.log("Gagal karena:", err.message);
+    const error = err;
     process.exit();
   });
 app.use("/uploads", express.static("uploads"));
 require("./app/routes/routes")(app);
 const port = process.env.port || 5000;
 
+app.get("/", (req, res) => {
+  res.send(this.error);
+});
 app.listen(port, () => {
   console.log(`Server berjalan di http:${port}/product`);
 });
