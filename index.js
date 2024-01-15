@@ -25,6 +25,10 @@ db.mongoose
   });
 app.use("/uploads", express.static("uploads"));
 require("./app/routes/routes")(app);
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send("Something went wrong!");
+});
 const port = process.env.port || 5000;
 
 app.get("/", (req, res) => {
