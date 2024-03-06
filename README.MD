@@ -1,5 +1,9 @@
 # Aplikasi Enigma Laundry
 
+## Postman document
+
+Untuk informasi tentang postman ada di url : https://documenter.getpostman.com/view/24168904/2sA2xe5a3A
+
 ## API Spec
 
 ### Customer API
